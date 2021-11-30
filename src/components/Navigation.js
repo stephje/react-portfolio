@@ -2,7 +2,6 @@ import * as React from 'react';
 import PropTypes from 'prop-types';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
-import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 
 import GitHubIcon from '@mui/icons-material/GitHub';
@@ -26,7 +25,7 @@ function TabPanel(props) {
         >
             {value === index && (
                 <Box sx={{ p: 3 }}>
-                    <Typography>{children}</Typography>
+                    <Box>{children}</Box>
                 </Box>
             )}
         </div>
@@ -69,7 +68,7 @@ export default function Navigation() {
                         <GitHubIcon sx={{ px: 1}} onClick={() => window.open('https://github.com/stephje')}/>
                         <LinkedInIcon sx={{ px: 1}} onClick={() => window.open('https://www.linkedin.com/in/stephje/')}/>
                         <EmailIcon sx={{ px: 1}} onClick={() => window.open('mailto:s.jenkins3018@gmail.com')}/>
-                        <a href='../../public/assets/files/Resume.pdf' download><DownloadIcon sx={{ px: 1}}/></a>
+                        <a href='../assets/files/Resume.pdf' download><DownloadIcon sx={{ px: 1}}/></a>
                     </Box>
                 </Box>
                 <TabPanel value={value} index={0}>

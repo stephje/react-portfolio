@@ -9,10 +9,12 @@ import Typography from '@mui/material/Typography';
 export default function ProjectCard({
   name,
   projectImage,
-  description
+  description,
+  projectLink,
+  githubLink
 }) {
   return (
-    <Card sx={{ maxWidth: 275, m: 1 }}>
+    <Card sx={{ maxWidth: 275, m: 1, display: 'flex', flexDirection: 'column', justifyContent: 'space-between'}}>
       <CardMedia
         component="img"
         height="194"
@@ -27,8 +29,9 @@ export default function ProjectCard({
           {description}
         </Typography>
       </CardContent>
-      <CardActions>
-        <Button size="small">Learn More</Button>
+      <CardActions sx={{ display: 'flex', justifyContent: 'space-between'}}>
+        <Button size="small" onClick={() =>  window.open(projectLink)}>Project</Button>
+        <Button size="small" onClick={() =>  window.open(githubLink)}>GitHub</Button>
       </CardActions>
     </Card>
   );

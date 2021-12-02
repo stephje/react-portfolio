@@ -17,7 +17,7 @@ export default function ProjectCard({
     <Card sx={{ maxWidth: 275, m: 1, display: 'flex', flexDirection: 'column', justifyContent: 'space-between'}}>
       <CardMedia
         component="img"
-        height="194"
+        maxWidth="250"
         image={projectImage}
         alt="Project Screenshot"
       />

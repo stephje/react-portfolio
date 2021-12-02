@@ -1,5 +1,54 @@
+import * as React from 'react';
+import ProjectCard from './ProjectCard';
+import Box from '@mui/material/Box';
+
+import shiftAssist from '../assets/images/projectImages/shiftassist.png';
+import localDiscovery from '../assets/images/projectImages/local-discovery.png';
+import workDayScheduler from '../assets/images/projectImages/work-day-scheduler.png';
+import weatherDashboard from '../assets/images/projectImages/weather-dashboard.png';
+import javascriptQuiz from '../assets/images/projectImages/javascript-quiz.png';
+
+const projectArray = [
+    {
+        name: "ShiftAssist",
+        projectImage: shiftAssist,
+        description: "A helpful tool that significantly reduces the time and effort required to construct a volunteer roster."
+    },
+    {
+        name: "Local Discovery",
+        projectImage: localDiscovery,
+        description: "A treasure-hunt style activity trail based on geolocation data."
+    },
+    {
+        name: "Work Day Scheduler",
+        projectImage: workDayScheduler,
+        description: "A simple calendar application that allows users to save events for each hour of the day."
+    },
+    {
+        name: "Weather Dashboard",
+        projectImage: weatherDashboard,
+        description: "A weather dashboard that utilises the OpenWeather One Call API."
+    },
+    {
+        name: "Javascript Quiz",
+        projectImage: javascriptQuiz,
+        description: "An interactive, timed JavaScript quiz that stores a high score leaderboard in local storage."
+    }
+]
+
 export default function Project() {
     return (
-        <h1>Projects</h1>
+        <React.Fragment>
+            <Box sx={{ display: 'flex', flexWrap: 'wrap' }}>
+            {projectArray.map((project) => (
+                <ProjectCard
+                    key={project.name}
+                    projectImage={project.projectImage}
+                    name={project.name}
+                    description={project.description}
+                />
+            ))}
+            </Box>
+        </React.Fragment>
     )
 }

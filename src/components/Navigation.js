@@ -55,7 +55,7 @@ export default function Navigation() {
     return (
         <React.Fragment>
             <Box sx={{ width: '100%' }}>
-                <Box sx={{ display: 'flex', justifyContent: 'space-between', borderBottom: 1, borderColor: 'divider' }}>
+                <Box sx={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'Wrap', borderBottom: 1, borderColor: 'divider' }}>
                     <Tabs
                         value={value}
                         onChange={handleChange}
